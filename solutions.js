@@ -109,12 +109,29 @@ console.log(maxNum(43, 135, 15))
 // In case of a tie, the first word in the array order is returned.
 // Commit your work with the message "print longest word completed".
 function printLongestWord(arr) {
-    arr.reduce((currentWord, longest){
+    return arr.reduce((currentWord, longest) => {
         if(currentWord.length > longest.length){
+            return currentWord
+        } else if(currentWord.length === longest.length){
             return currentWord
         } else {
             return longest
         }
     })
 }
-console.log(printLongestWord(['Tyler', 'Jennifer', 'Dean']))
+console.log(printLongestWord(['Tyler', 'General Assembly', 'Software Engineering']))
+
+// Transmogrify the Numbers
+// Calculate the product of the first two numbers.
+// Raise the product to the power of the third number.
+// Return the result.
+// Commit your work with the message "transmogrify the numbers completed".
+function transmogrify(...nums){
+    return nums.reduce((num1, num2, num3) => {
+        const product = num1 * num2
+        for(let i = 1; i <= num3; i++){
+            return product * 
+        }
+    })
+}
+console.log(transmogrify(3, 3, 2))
