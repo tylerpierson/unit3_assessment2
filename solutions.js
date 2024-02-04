@@ -55,7 +55,6 @@ function printPrimes(num){
             console.log(i)
         }
     }
-    return num
 }
 
-console.log(printPrimes(9))
+printPrimes(17)
