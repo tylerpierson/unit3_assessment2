@@ -24,3 +24,38 @@ function sumArray(num) {
     return sum
 }
 console.log(sumArray([1,2,3,4]))
+
+// Prime Numbers
+// checkPrime
+// Check if the number is less than or equal to 1. If so, return false because it's not prime.
+// Use a for loop to iterate from 2 up to the square root of the number.
+// If the number is divisible by any number in this range, return false.
+// If no divisors are found, return true.
+function checkPrime(num) {
+    if(num <= 1){
+        return false
+    }
+    for(let i = 2; i < num; i++){
+        if(num % i === 0) {
+            return false
+        }
+    }
+    return true
+}
+console.log(checkPrime(9))
+
+// printPrimes
+// Use a for loop to iterate through numbers from 2 up to the specified limit.
+// For each number, use the checkPrimefunction to check if it's prime.
+// If checkPrimereturns true, console.log the number.
+// Commit your work with the message "prime numbers completed".
+function printPrimes(num){
+    for(let i = 2; i <= num; i++){
+        if(checkPrime(i)){
+            console.log(i)
+        }
+    }
+    return num
+}
+
+console.log(printPrimes(9))
