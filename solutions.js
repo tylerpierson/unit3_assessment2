@@ -103,3 +103,18 @@ console.log(getMultipleLengths(["Tyler", "Jennifer", "Dean", "Ringo"]))
 // Commit your work with the message "maximum of three numbers completed".
 const maxNum = (num1, num2, num3) => Math.max(num1, num2, num3)
 console.log(maxNum(43, 135, 15))
+
+// Print Longest Word
+// Use the reduce method to find the longest string in the array.
+// In case of a tie, the first word in the array order is returned.
+// Commit your work with the message "print longest word completed".
+function printLongestWord(arr) {
+    arr.reduce((currentWord, longest){
+        if(currentWord.length > longest.length){
+            return currentWord
+        } else {
+            return longest
+        }
+    })
+}
+console.log(printLongestWord(['Tyler', 'Jennifer', 'Dean']))
